@@ -1,12 +1,17 @@
 export class contaCorrente {
     agencia;
     _saldo = 0;
+    _cliente;
+
+
+    constructor(cliente, agencia) {
+        this._cliente = cliente;
+        this.agencia = agencia;
+    }
 
     get saldo() {
         return this._saldo;
     }
-
-    _cliente;
 
     set cliente(novoValor) {
         if(novoValor instanceof Cliente) {
@@ -21,7 +26,7 @@ export class contaCorrente {
     sacar(valor) {
         if (this._saldo >= valor) {
             this._saldo -= valor;
-            console.log("Saque realizado com sucesso , seu saldo agora é de " + this._saldo + " Reais");
+            console.log("Saque realizado com sucesso , seu saldo agora é de R$ " + this._saldo);
             return valor;
         } else {
             console.log("O seu saldo não é suficiente pra realizar essa operação");
@@ -33,12 +38,12 @@ export class contaCorrente {
             return;
         } 
         this._saldo += valor;
-        console.log("Depósito realizado com sucesso, seu saldo agora é de " + this._saldo + " reais");
+        console.log("Depósito realizado com sucesso, seu saldo agora é de R$ " + this._saldo );
     }
 
     transferir(valor, conta) {
         const valorSacado = this.sacar(valor);
         conta.depositar(valorSacado);
-        console.log(`Transferência realizada com sucesso, seu saldo agora é de ${this._saldo}`);
+        console.log(`Transferência realizada com sucesso, seu saldo agora é de R$ ${this._saldo}`);
     }
 }
