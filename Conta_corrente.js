@@ -1,4 +1,5 @@
 export class contaCorrente {
+    static numeroDeContas = 0;
     agencia;
     _saldo = 0;
     _cliente;
@@ -7,6 +8,7 @@ export class contaCorrente {
     constructor(cliente, agencia) {
         this._cliente = cliente;
         this.agencia = agencia;
+        contaCorrente.numeroDeContas += 1;
     }
 
     get saldo() {
