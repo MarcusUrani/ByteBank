@@ -1,0 +1,25 @@
+{
+  "name": "bytebank",
+  "version": "1.0.0",
+  "description": "ByteBank o banco mais tech do Brasil",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarcusUrani/ByteBank.git"
+  },
+  "keywords": [
+    "Bank",
+    "Byte",
+    "tech"
+  ],
+  "author": "Marcus Urani",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/MarcusUrani/ByteBank/issues"
+  },
+  "homepage": "https://github.com/MarcusUrani/ByteBank#readme"
+}
