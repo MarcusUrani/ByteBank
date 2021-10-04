@@ -1,8 +1,4 @@
-export class cliente {
-    nome;
-    _cpf;
-    _rg;
-
+export class Cliente {
     get cpf() {
         return this._cpf;
     }
